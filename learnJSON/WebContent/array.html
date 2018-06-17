@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>Looping through arrays inside arrays.</p>
+
+<p id="demo">gdgrdg</p>
+
+<script>
+
+var myobj, i, j, x = "";
+var myobj={"employees":[
+		{"firstname":"john","lastname":["doe","pom","rom"]},
+		{"firstname":"anna","lastname":["smith","vimith","remit"]},
+		{"firstname":"peter","lastname":["england","paris","ireland"]}
+	             ]};
+	// myobj=JSON.parse(myJSON);
+for(i in myobj.employees){
+		 x += "<h2>"+ myobj.employees[i].firstname + "</h2>";
+		for(j in myobj.employees[i].lastname){	
+		 x += myobj.employees[i].lastname[j]+"<br>";
+		}
+	}
+document.getElementById("demo").innerHTML = x + "<br>"  ;
+//document.getElementById("demo").innerHTML = y;
+</script>
+
+</body>
+</html>

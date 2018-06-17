@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<h2>Convert a string written in JSON format to java script object</h2>
+<p id="demo"></p> 
+<script>
+var myJSON='{"name":"shivam","age":24,"city":"NYC"}';
+var myobj=JSON.parse(myJSON);
+document.getElementById("demo").innerHTML=myobj.name + myobj.age;
+</script>
+</body>
+</html>
